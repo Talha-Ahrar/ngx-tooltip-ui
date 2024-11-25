@@ -1,0 +1,16 @@
+<div
+  class="tooltip-container"
+  [ngStyle]="{
+    top: position?.top,
+    left: position?.left,
+    backgroundColor: backgroundColor,
+    color: color,
+    border: borderStyle
+  }"
+  [ngClass]="positionClass"
+>
+  <ng-container *ngIf="icon">
+    <i [class]="icon"></i>
+  </ng-container>
+  {{ content }}
+</div>

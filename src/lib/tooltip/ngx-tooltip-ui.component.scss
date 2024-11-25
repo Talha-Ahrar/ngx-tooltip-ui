@@ -1,0 +1,38 @@
+.ngx-tooltip {
+  position: absolute;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  z-index: 1000;
+  white-space: nowrap;
+  transition: opacity 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+  }
+
+  &.top::before {
+    border-color: transparent transparent #000 transparent;
+    top: 100%;
+  }
+
+  &.bottom::before {
+    border-color: #000 transparent transparent transparent;
+    bottom: 100%;
+  }
+
+  &.left::before {
+    border-color: transparent transparent transparent #000;
+    left: 100%;
+  }
+
+  &.right::before {
+    border-color: transparent #000 transparent transparent;
+    right: 100%;
+  }
+}
